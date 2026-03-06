@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato · YSPANUS Languages</title>
+  <meta name="description" content="Entre em contato com a Yspanus Languages. Tire dúvidas, solicite orçamentos ou informações sobre nossos cursos e consultorias.">
+  
+  <!-- Bootstrap 5 + ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Fonte Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --ys-red: #c8102e;
+      --ys-yellow: #ffb81c;
+      --ys-white: #ffffff;
+      --ys-light-bg: #fef6e9;
+      --ys-gray: #f8f9fa;
+      --ys-dark: #1a1e21;
+    }
+    
+    * {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    body {
+      color: #212529;
+      background-color: var(--ys-white);
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    .bg-ys-red { background-color: var(--ys-red) !important; }
+    .bg-ys-yellow { background-color: var(--ys-yellow) !important; }
+    .text-ys-red { color: var(--ys-red) !important; }
+    .text-ys-yellow { color: var(--ys-yellow) !important; }
+    
+    .btn-ys-red {
+      background-color: var(--ys-red);
+      border-color: var(--ys-red);
+      color: white;
+      transition: 0.2s;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+    }
+    .btn-ys-red:hover {
+      background-color: #a00d25;
+      border-color: #a00d25;
+      color: white;
+    }
+    
+    .btn-ys-outline {
+      background-color: transparent;
+      border: 2px solid var(--ys-red);
+      color: var(--ys-red);
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 0.75rem 2rem;
+    }
+    .btn-ys-outline:hover {
+      background-color: var(--ys-red);
+      color: white;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background-color: var(--ys-yellow);
+    }
+    
+    /* Navbar */
+    .navbar {
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      padding: 0.8rem 0;
+    }
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+    .nav-link {
+      font-weight: 600;
+      color: var(--ys-dark);
+      margin: 0 0.25rem;
+      padding: 0.5rem 1rem !important;
+      border-radius: 50px;
+      transition: 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--ys-red);
+      background-color: rgba(200,16,46,0.05);
+    }
+    
+    /* Card de contato */
+    .contact-card {
+      background-color: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      transition: 0.3s;
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(200,16,46,0.08);
+    }
+    .contact-icon {
+      background-color: var(--ys-yellow);
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .contact-icon i {
+      font-size: 2rem;
+      color: var(--ys-red);
+    }
+    
+    /* Formulário */
+    .form-container {
+      background-color: white;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      border: 1px solid #f0f0f0;
+    }
+    .form-control, .form-select {
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid #e0e0e0;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--ys-red);
+      box-shadow: 0 0 0 0.2rem rgba(200,16,46,0.1);
+    }
+    .form-label {
+      font-weight: 600;
+      color: #333;
+    }
+    
+    /* LGPD checkbox */
+    .lgpd-box {
+      background-color: var(--ys-light-bg);
+      border-left: 4px solid var(--ys-red);
+      padding: 1.2rem;
+      border-radius: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    
+    /* Mapa/endereço */
+    .map-placeholder {
+      background-color: #eee;
+      border-radius: 1rem;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+    }
+    
+    /* Rodapé */
+    .footer-link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .footer-link:hover {
+      color: var(--ys-yellow);
+    }
+    
+    .social-icon {
+      color: var(--ys-yellow);
+      font-size: 1.8rem;
+      margin-right: 1rem;
+      transition: 0.2s;
+    }
+    .social-icon:hover {
+      color: white;
+    }
+    
+    /* Recaptcha disclaimer */
+    .recaptcha-disclaimer {
+      font-size: 0.8rem;
+      color: #6c757d;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      background-color: #f8f9fa;
+      border-radius: 0.5rem;
+      text-align: center;
+    }
+    .recaptcha-disclaimer a {
+      color: var(--ys-red);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .section-title { font-size: 2rem; }
+      .navbar-brand img { height: 40px; }
+      .form-container { padding: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR (mesma do index) -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="logoys.jpg" alt="YSPANUS Languages" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobreys.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#cursos">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contatoys.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO DA PÁGINA DE CONTATO -->
+<section class="bg-ys-red text-white py-5">
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold mb-4">Fale com a Yspanus</h1>
+        <p class="fs-5">Estamos prontos para atender você, sua empresa ou sua escola. Tire dúvidas, solicite um orçamento ou agende uma conversa com nossos especialistas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMAÇÕES DE CONTATO (CARDS) -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="bi bi-whatsapp"></i></div>
+          <h4>WhatsApp</h4>
+          <p class="fs-4 fw-bold text-ys-red">(21) 96554-4400</p>
+          <p class="text-secondary">Atendimento de segunda a sexta, 9h às 18h.</p>
+          <a href="https://wa.me/5521965544400" target="_blank" rel="noopener" class="btn btn-ys-outline btn-sm">Enviar mensagem</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+          <h4>E-mail</h4>
+          <p class="fw-bold">financeiro@yspanus.com.br</p>
+          <p class="text-secondary">Para questões financeiras, matrículas e cursos.</p>
+          <p class="fw-bold mt-3">ouvidoria@yspanus.com.br</p>
+          <p class="text-secondary">Para reclamações, elogios e sugestões.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+          <h4>Endereço</h4>
+          <p class="fw-bold">Icaraí, Niterói - RJ</p>
+          <p class="text-secondary">Atendimento presencial mediante agendamento.</p>
+          <p class="mt-3"><i class="bi bi-clock me-2 text-ys-red"></i> Seg a sex: 9h às 20h | Sáb: 9h às 13h</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO DE CONTATO PRINCIPAL -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="form-container">
+          <h2 class="section-title">Envie sua mensagem</h2>
+          <p class="lead mb-4">Preencha o formulário abaixo que retornaremos em até 24 horas úteis.</p>
+          
+          <form action="/enviar-contato" method="POST">
+            <!-- Token CSRF (substituir pelo mecanismo do backend) -->
+            <input type="hidden" name="_token" value="gerar_token_unico">
+            
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label class="form-label">Nome completo <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="nome" required placeholder="Seu nome completo">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Empresa (opcional)</label>
+                <input type="text" class="form-control" name="empresa" placeholder="Nome da empresa">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">E-mail <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" name="email" required placeholder="seu@email.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Telefone / WhatsApp</label>
+                <input type="tel" class="form-control" name="telefone" placeholder="(21) 99999-9999">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Assunto <span class="text-danger">*</span></label>
+                <select class="form-select" name="assunto" required>
+                  <option value="">Selecione...</option>
+                  <option value="cursos">Informações sobre cursos</option>
+                  <option value="consultoria-empresas">Consultoria para empresas</option>
+                  <option value="consultoria-escolas">Consultoria para escolas</option>
+                  <option value="orçamento">Solicitar orçamento</option>
+                  <option value="matricula">Matrícula</option>
+                  <option value="duvida">Dúvida</option>
+                  <option value="ouvidoria">Ouvidoria</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Mensagem <span class="text-danger">*</span></label>
+                <textarea class="form-control" name="mensagem" rows="5" required placeholder="Escreva sua mensagem com detalhes..."></textarea>
+              </div>
+              
+              <!-- Anexo (opcional) -->
+              <div class="col-12">
+                <label class="form-label">Anexar arquivo (opcional)</label>
+                <input type="file" class="form-control" name="anexo" accept=".pdf,.doc,.docx,.jpg,.png">
+                <small class="text-secondary">Tamanho máximo: 5MB. Formatos aceitos: PDF, DOC, JPG, PNG.</small>
+              </div>
+              
+              <!-- LGPD: Consentimento explícito -->
+              <div class="col-12">
+                <div class="lgpd-box">
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="consentimento" id="contatoConsent" required>
+                    <label class="form-check-label fw-semibold" for="contatoConsent">
+                      Concordo em receber comunicações da Yspanus
+                    </label>
+                  </div>
+                  <small class="text-secondary d-block">
+                    Seus dados serão utilizados exclusivamente para responder seu contato e enviar informações sobre nossos cursos e serviços, conforme nossa <a href="/privacidade" target="_blank" class="text-ys-red">Política de Privacidade</a>. Você pode cancelar a inscrição a qualquer momento.
+                  </small>
+                </div>
+              </div>
+              
+              <!-- reCAPTCHA disclaimer -->
+              <div class="col-12">
+                <div class="recaptcha-disclaimer">
+                  <i class="bi bi-shield-check text-success me-1"></i> 
+                  Este site é protegido por reCAPTCHA e aplicam-se a 
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade</a> e 
+                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Termos de Serviço</a> do Google.
+                </div>
+              </div>
+              
+              <!-- Botão de envio -->
+              <div class="col-12">
+                <button type="submit" class="btn btn-ys-red w-100 py-3">Enviar mensagem</button>
+              </div>
+              
+              <div class="col-12">
+                <p class="small text-secondary text-center mt-3">
+                  <i class="bi bi-lock me-1"></i> Seus dados estão seguros e não serão compartilhados com terceiros.
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA / LOCALIZAÇÃO (placeholder) -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title">Onde estamos</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="fs-5">Nossa sede fica no coração de Icaraí, Niterói, com fácil acesso e estrutura completa para atendimento presencial.</p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-3"><i class="bi bi-geo-alt-fill text-ys-red me-2"></i> <strong>Endereço:</strong> Rua Exemplo, 123 - Icaraí, Niterói - RJ</li>
+          <li class="mb-3"><i class="bi bi-telephone-fill text-ys-red me-2"></i> <strong>Telefone:</strong> (21) 2712-3456</li>
+          <li class="mb-3"><i class="bi bi-clock-fill text-ys-red me-2"></i> <strong>Horário:</strong> Segunda a sexta, 9h às 20h | Sábado, 9h às 13h</li>
+        </ul>
+        <p class="mt-3"><span class="badge bg-ys-yellow text-dark">Atendimento mediante agendamento</span></p>
+      </div>
+      <div class="col-md-6">
+        <div class="map-placeholder">
+          <i class="bi bi-map fs-1 d-block text-center"></i>
+          <p class="mt-2">Mapa interativo - Rua Exemplo, 123, Icaraí</p>
+          <small class="text-secondary">(Integração com Google Maps pode ser adicionada)</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ RÁPIDO (opcional) -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Perguntas frequentes</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="bg-white p-4 rounded-4">
+          <h5><i class="bi bi-question-circle text-ys-red me-2"></i> Qual o prazo de resposta?</h5>
+          <p class="text-secondary">Respondemos todas as mensagens em até 24 horas úteis.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="bg-white p-4 rounded-4">
+          <h5><i class="bi bi-question-circle text-ys-red me-2"></i> Como faço minha matrícula?</h5>
+          <p class="text-secondary">Entre em contato pelo formulário ou WhatsApp que enviaremos todas as informações.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="bg-white p-4 rounded-4">
+          <h5><i class="bi bi-question-circle text-ys-red me-2"></i> Atendem empresas de outros estados?</h5>
+          <p class="text-secondary">Sim! Nossos serviços corporativos são 100% online e atendemos todo o Brasil.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="bg-white p-4 rounded-4">
+          <h5><i class="bi bi-question-circle text-ys-red me-2"></i> Como cancelar a newsletter?</h5>
+          <p class="text-secondary">Basta clicar no link de descadastramento em qualquer e-mail ou solicitar pelo nosso formulário.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER (opcional) -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="bg-ys-red text-white p-5 rounded-5">
+          <h3 class="text-center mb-4">Quer receber novidades?</h3>
+          <p class="text-center mb-4">Assine nossa newsletter e fique por dentro de promoções, novos cursos e dicas de idiomas.</p>
+          <form action="/newsletter" method="POST">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control form-control-lg" placeholder="Seu nome" name="nome" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control form-control-lg" placeholder="Seu e-mail" name="email" required>
+              </div>
+              <div class="col-12">
+                <div class="form-check text-white">
+                  <input class="form-check-input" type="checkbox" name="consentimento_news" id="newsFooterConsent" required>
+                  <label class="form-check-label small" for="newsFooterConsent">
+                    Concordo em receber comunicações da Yspanus. Li e aceito a <a href="/privacidade" target="_blank" class="text-ys-yellow">Política de Privacidade</a>. Ao assinar, você concorda em receber conteúdos exclusivos da Yspanus. Você pode cancelar a qualquer momento. Seus dados estão seguros conosco
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-ys-yellow text-dark w-100 py-3">Assinar newsletter</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ COMPLETO (igual ao index) -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <img src="logoys.jpg" alt="YSPANUS" style="height: 50px; background-color: white; padding: 5px; border-radius: 5px;" class="mb-3">
+        <p class="small opacity-75">Desde 1992 oferecendo soluções personalizadas em idiomas para pessoas e empresas.</p>
+        <div class="mt-3">
+          <a href="https://www.instagram.com/yspanus/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/YspanusLanguages/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/yspanuslanguages/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-ys-yellow mb-3">Contato</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-whatsapp text-ys-yellow me-2"></i> <a href="https://wa.me/5521965544400" target="_blank" rel="noopener" class="footer-link">(21) 96554-4400 (WhatsApp)</a></li>
+          <li class="mb-2"><i class="bi bi-envelope me-2"></i> <a href="mailto:financeiro@yspanus.com.br" class="footer-link">financeiro@yspanus.com.br</a></li>
+          <li class="mb-2"><i class="bi bi-envelope-paper me-2"></i> <a href="mailto:ouvidoria@yspanus.com.br" class="footer-link">ouvidoria@yspanus.com.br</a></li>
+          <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span class="footer-link">Icaraí, Niterói - RJ</span></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-ys-yellow mb-3">Legal</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="sobreys.html" class="footer-link"><i class="bi bi-building me-2"></i>Sobre a Yspanus</a></li>
+          <li class="mb-2"><a href="/privacidade" class="footer-link"><i class="bi bi-shield-lock me-2"></i>Política de Privacidade</a></li>
+          <li class="mb-2"><a href="termoys.html" class="footer-link"><i class="bi bi-file-text me-2"></i>Termos de Uso</a></li>
+          <li class="mb-2"><a href="contatoys.html" class="footer-link"><i class="bi bi-briefcase me-2"></i>Trabalhe conosco</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-white-50 my-4">
+    <div class="row align-items-center">
+      <div class="col-md-6 small opacity-75">
+        © 2026 Yspanus Languages. Todos os direitos reservados. CNPJ 39.242.458/0001-92
+      </div>
+      <div class="col-md-6 text-md-end small">
+        <span class="text-white-50 me-3"><i class="bi bi-shield-check"></i> LGPD</span>
+        <span class="text-white-50"><i class="bi bi-lock"></i> Dados protegidos</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

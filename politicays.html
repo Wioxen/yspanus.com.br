@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade · Yspanus Languages · LGPD</title>
+  <meta name="description" content="Política de Privacidade da Yspanus Languages. Saiba como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD.">
+  
+  <!-- Bootstrap 5 + ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    :root {
+      --ys-red: #c8102e;
+      --ys-yellow: #ffb81c;
+      --ys-white: #ffffff;
+      --ys-light-bg: #fef6e9;
+      --ys-gray: #f8f9fa;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      color: #212529;
+      background-color: var(--ys-white);
+    }
+    
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    .bg-ys-red { background-color: var(--ys-red) !important; }
+    .bg-ys-yellow { background-color: var(--ys-yellow) !important; }
+    .text-ys-red { color: var(--ys-red) !important; }
+    .text-ys-yellow { color: var(--ys-yellow) !important; }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background-color: var(--ys-yellow);
+    }
+    
+    .privacy-content {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
+    }
+    
+    .privacy-section {
+      margin-bottom: 2rem;
+      scroll-margin-top: 2rem;
+    }
+    
+    .privacy-section h3 {
+      color: var(--ys-red);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--ys-yellow);
+      padding-bottom: 0.5rem;
+    }
+    
+    .privacy-section h4 {
+      color: #333;
+      margin: 1.5rem 0 0.8rem;
+      font-size: 1.2rem;
+    }
+    
+    .privacy-section p, .privacy-section li {
+      line-height: 1.7;
+      color: #333;
+    }
+    
+    .privacy-section ul, .privacy-section ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .privacy-section li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .footer-link:hover {
+      color: var(--ys-yellow);
+    }
+    
+    .social-icon {
+      color: var(--ys-yellow);
+      font-size: 1.8rem;
+      margin-right: 1rem;
+      transition: 0.2s;
+    }
+    .social-icon:hover {
+      color: white;
+    }
+    
+    .last-updated {
+      background-color: var(--ys-light-bg);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--ys-red);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    
+    .btn-ys-red {
+      background-color: var(--ys-red);
+      border-color: var(--ys-red);
+      color: white;
+      transition: 0.2s;
+      font-weight: 600;
+    }
+    .btn-ys-red:hover {
+      background-color: #a00d25;
+      border-color: #a00d25;
+      color: white;
+    }
+    
+    .lgpd-badge {
+      background-color: var(--ys-yellow);
+      color: #1a1e21;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-block;
+      margin: 0.25rem;
+    }
+    
+    .data-table {
+      background-color: var(--ys-gray);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .rights-card {
+      background-color: var(--ys-light-bg);
+      border-radius: 0.5rem;
+      padding: 1.2rem;
+      margin: 1rem 0;
+      border-left: 4px solid var(--ys-red);
+    }
+    
+    .contact-card {
+      background: linear-gradient(135deg, var(--ys-red), #a00d25);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin: 2rem 0;
+    }
+    .contact-card a {
+      color: var(--ys-yellow);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVEGAÇÃO SIMPLES -->
+<nav class="navbar navbar-expand-lg bg-light py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-ys-red" href="/">YSPANUS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobreys.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="/cursos">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatoys.html">Contato</a></li>
+        <li class="nav-item"><a class="nav-link active" href="politicays.html">Privacidade</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO DA PÁGINA -->
+<section class="bg-ys-red text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold mb-4">Política de Privacidade</h1>
+        <p class="fs-5">Seus dados pessoais protegidos de acordo com a Lei Geral de Proteção de Dados (LGPD).</p>
+        <div class="mt-3">
+          <span class="lgpd-badge"><i class="bi bi-shield-check me-1"></i> LGPD - Lei 13.709/2018</span>
+          <span class="lgpd-badge"><i class="bi bi-lock me-1"></i> Dados seguros</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEÚDO DA POLÍTICA -->
+<section class="py-5">
+  <div class="container">
+    <div class="last-updated">
+      <i class="bi bi-calendar-check text-ys-red me-2"></i>
+      <strong>Última atualização:</strong> 06 de março de 2026
+    </div>
+    
+    <div class="privacy-content">
+      
+      <!-- ÍNDICE RÁPIDO -->
+      <div class="bg-light p-3 rounded-3 mb-4">
+        <p class="fw-bold mb-2"><i class="bi bi-list-ul text-ys-red me-2"></i>Nesta página:</p>
+        <div class="row g-2">
+          <div class="col-md-4"><a href="#quem-somos" class="text-decoration-none">1. Quem somos</a></div>
+          <div class="col-md-4"><a href="#dados-coletados" class="text-decoration-none">2. Dados coletados</a></div>
+          <div class="col-md-4"><a href="#finalidades" class="text-decoration-none">3. Finalidades</a></div>
+          <div class="col-md-4"><a href="#compartilhamento" class="text-decoration-none">4. Compartilhamento</a></div>
+          <div class="col-md-4"><a href="#direitos" class="text-decoration-none">5. Seus direitos</a></div>
+          <div class="col-md-4"><a href="#cookies" class="text-decoration-none">6. Cookies</a></div>
+          <div class="col-md-4"><a href="#seguranca" class="text-decoration-none">7. Segurança</a></div>
+          <div class="col-md-4"><a href="contatoys.html-dpo" class="text-decoration-none">8. Contato DPO</a></div>
+        </div>
+      </div>
+      
+      <!-- 1. QUEM SOMOS -->
+      <div id="quem-somos" class="privacy-section">
+        <h3>1. Quem somos</h3>
+        <p>A <strong>Yspanus Languages</strong> é uma escola de idiomas fundada em 1989, especializada em cursos para pessoas físicas e treinamento corporativo. Nosso compromisso com a transparência e a proteção dos dados pessoais é parte fundamental da nossa relação com alunos, prospects e parceiros.</p>
+        <p><strong>Controladora dos dados:</strong> Yspanus Languages Ltda.<br>
+        <strong>CNPJ:</strong> 39.242.458/0001-92<br>
+        <strong>Endereço:</strong> Av. Rio Branco, 123 - Centro, Rio de Janeiro, RJ - CEP 20040-005</p>
+        <p>Esta Política de Privacidade descreve como tratamos os dados pessoais coletados em nosso site, plataformas de ensino e canais de atendimento.</p>
+      </div>
+      
+      <!-- 2. DADOS COLETADOS -->
+      <div id="dados-coletados" class="privacy-section">
+        <h3>2. Quais dados coletamos</h3>
+        <p>Coletamos apenas os dados estritamente necessários para as finalidades descritas nesta política. Os dados variam conforme a interação do usuário:</p>
+        
+        <div class="data-table">
+          <h4>2.1. Dados fornecidos voluntariamente</h4>
+          <ul>
+            <li><strong>Formulário de contato:</strong> nome, e-mail, telefone (opcional), mensagem.</li>
+            <li><strong>Newsletter:</strong> nome, e-mail.</li>
+            <li><strong>Matrícula em cursos:</strong> nome completo, CPF, RG, data de nascimento, endereço completo, e-mail, telefone, dados de pagamento.</li>
+            <li><strong>Área do aluno:</strong> login, senha (criptografada), histórico de cursos.</li>
+            <li><strong>Trabalhe conosco:</strong> nome, e-mail, telefone, currículo (arquivo).</li>
+          </ul>
+        </div>
+        
+        <div class="data-table">
+          <h4>2.2. Dados coletados automaticamente</h4>
+          <ul>
+            <li><strong>Cookies e tecnologias similares:</strong> preferências de navegação, páginas acessadas, tempo de visita.</li>
+            <li><strong>Dados de dispositivo:</strong> endereço IP, tipo de navegador, sistema operacional.</li>
+            <li><strong>Interações com e-mails:</strong> aberturas, cliques em links (quando aplicável).</li>
+          </ul>
+        </div>
+        
+        <div class="data-table">
+          <h4>2.3. Dados sensíveis</h4>
+          <p><strong>NÃO coletamos</strong> dados sensíveis (origem racial ou étnica, convicção religiosa, opinião política, filiação sindical, dados genéticos, biométricos, saúde ou vida sexual) sem consentimento explícito ou previsão legal.</p>
+        </div>
+      </div>
+      
+      <!-- 3. FINALIDADES E BASES LEGAIS -->
+      <div id="finalidades" class="privacy-section">
+        <h3>3. Para que usamos seus dados</h3>
+        <p>Utilizamos seus dados pessoais apenas para as finalidades específicas descritas abaixo, sempre com base legal adequada (LGPD, art. 7º):</p>
+        
+        <table class="table table-bordered table-hover mt-3">
+          <thead class="bg-light">
+            <tr>
+              <th>Finalidade</th>
+              <th>Dados utilizados</th>
+              <th>Base legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Responder a solicitações de contato</td>
+              <td>Nome, e-mail, telefone, mensagem</td>
+              <td>Legítimo interesse / Consentimento</td>
+            </tr>
+            <tr>
+              <td>Enviar newsletter e materiais promocionais</td>
+              <td>Nome, e-mail</td>
+              <td>Consentimento (opt-in)</td>
+            </tr>
+            <tr>
+              <td>Processar matrículas e pagamentos</td>
+              <td>Dados cadastrais e financeiros</td>
+              <td>Execução de contrato</td>
+            </tr>
+            <tr>
+              <td>Gerenciar acesso à área do aluno</td>
+              <td>Nome, e-mail, login</td>
+              <td>Execução de contrato</td>
+            </tr>
+            <tr>
+              <td>Melhorar a experiência no site</td>
+              <td>Cookies, dados de navegação</td>
+              <td>Legítimo interesse</td>
+            </tr>
+            <tr>
+              <td>Cumprir obrigações legais</td>
+              <td>Dados cadastrais e fiscais</td>
+              <td>Obrigação legal</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p class="fw-semibold mt-2">Importante: A Yspanus NÃO utiliza seus dados para fins incompatíveis com os aqui descritos nem compartilha informações com terceiros para marketing não autorizado.</p>
+      </div>
+      
+      <!-- 4. COMPARTILHAMENTO -->
+      <div id="compartilhamento" class="privacy-section">
+        <h3>4. Compartilhamento de dados</h3>
+        <p>A Yspanus poderá compartilhar seus dados pessoais apenas nas seguintes situações:</p>
+        <ul>
+          <li><strong>Com provedores de serviço:</strong> empresas que auxiliam na operação (plataforma de ensino, processadores de pagamento, envio de e-mails). Todos os parceiros estão contratualmente obrigados a respeitar a LGPD.</li>
+          <li><strong>Por obrigação legal:</strong> quando exigido por lei, ordem judicial ou órgão regulador.</li>
+          <li><strong>Com seu consentimento:</strong> quando você autorizar expressamente o compartilhamento.</li>
+        </ul>
+        <p>A Yspanus <strong>não vende, aluga ou comercializa</strong> dados pessoais sob qualquer hipótese.</p>
+      </div>
+      
+      <!-- 5. DIREITOS DO TITULAR -->
+      <div id="direitos" class="privacy-section">
+        <h3>5. Seus direitos (LGPD)</h3>
+        <p>Em conformidade com a Lei nº 13.709/2018 (LGPD), você, titular dos dados, possui os seguintes direitos:</p>
+        
+        <div class="rights-card">
+          <ul class="mb-0">
+            <li><strong>Confirmação e acesso:</strong> saber se tratamos seus dados e acessá-los.</li>
+            <li><strong>Correção:</strong> solicitar a correção de dados incompletos, inexatos ou desatualizados.</li>
+            <li><strong>Anonimização, bloqueio ou eliminação:</strong> solicitar a anonimização ou eliminação de dados desnecessários ou tratados em desconformidade.</li>
+            <li><strong>Portabilidade:</strong> solicitar a portabilidade dos dados a outro fornecedor (mediante regulamentação).</li>
+            <li><strong>Eliminação por consentimento:</strong> revogar o consentimento e solicitar a eliminação dos dados tratados com base no consentimento.</li>
+            <li><strong>Informação sobre compartilhamento:</strong> saber com quais entidades públicas ou privadas compartilhamos seus dados.</li>
+            <li><strong>Oposição:</strong> opor-se a tratamento baseado em legítimo interesse.</li>
+            <li><strong>Revisão de decisões automatizadas:</strong> solicitar revisão de decisões tomadas unicamente com base em tratamento automatizado.</li>
+          </ul>
+        </div>
+        
+        <p>Para exercer seus direitos, utilize o formulário de contato ou envie e-mail para <a href="mailto:lgpd@yspanus.com.br" class="text-ys-red fw-semibold">lgpd@yspanus.com.br</a>. Responderemos em até <strong>15 dias</strong>.</p>
+      </div>
+      
+      <!-- 6. COOKIES -->
+      <div id="cookies" class="privacy-section">
+        <h3>6. Cookies e tecnologias semelhantes</h3>
+        <p>Utilizamos cookies para melhorar sua experiência, analisar tráfego e personalizar conteúdo. Os cookies podem ser:</p>
+        <ul>
+          <li><strong>Essenciais:</strong> necessários para o funcionamento do site.</li>
+          <li><strong>Analíticos:</strong> para entender como os visitantes interagem com o site (Google Analytics).</li>
+          <li><strong>Funcionais:</strong> para lembrar preferências e personalizar a navegação.</li>
+        </ul>
+        <p>Ao continuar navegando, você consente com o uso de cookies. Você pode gerenciar as preferências nas configurações do seu navegador.</p>
+        <p class="mt-2"><a href="/cookies" class="text-ys-red">Saiba mais sobre nossa Política de Cookies</a>.</p>
+      </div>
+      
+      <!-- 7. SEGURANÇA -->
+      <div id="seguranca" class="privacy-section">
+        <h3>7. Segurança dos dados</h3>
+        <p>Adotamos medidas técnicas e organizacionais para proteger seus dados contra acesso não autorizado, perda, destruição ou alteração:</p>
+        <ul>
+          <li>Criptografia SSL/TLS em todas as páginas (HTTPS).</li>
+          <li>Armazenamento em servidores seguros com acesso restrito.</li>
+          <li>Senhas criptografadas e políticas de acesso rigorosas.</li>
+          <li>Treinamento periódico de colaboradores em proteção de dados.</li>
+          <li>Planos de resposta a incidentes.</li>
+        </ul>
+        <p>Apesar de nossos esforços, nenhuma transmissão pela internet é 100% segura. Em caso de incidente, notificaremos os titulares e as autoridades competentes conforme exigido por lei.</p>
+      </div>
+      
+      <!-- 8. ARMAZENAMENTO -->
+      <div class="privacy-section">
+        <h3>8. Por quanto tempo armazenamos seus dados</h3>
+        <p>Armazenamos seus dados pelo tempo necessário para cumprir as finalidades para as quais foram coletados, considerando:</p>
+        <ul>
+          <li><strong>Dados de contato não convertidos:</strong> até 12 meses.</li>
+          <li><strong>Dados de alunos e ex-alunos:</strong> enquanto durar a relação contratual e após, para cumprimento de obrigações legais e fiscais (até 5 anos após o término).</li>
+          <li><strong>Dados de newsletter:</strong> até que você cancele a inscrição.</li>
+          <li><strong>Logs de navegação:</strong> até 6 meses (conforme Marco Civil da Internet).</li>
+        </ul>
+      </div>
+      
+      <!-- 9. DADOS DE MENORES -->
+      <div class="privacy-section">
+        <h3>9. Dados de menores de idade</h3>
+        <p>Nossos cursos são destinados a maiores de 18 anos. Eventualmente, podemos oferecer programas específicos para adolescentes (13-17 anos), caso em que solicitaremos o consentimento expresso dos pais ou responsáveis legais.</p>
+        <p>Se tomarmos conhecimento de que coletamos dados de menor sem o devido consentimento, providenciaremos a eliminação imediata.</p>
+      </div>
+      
+      <!-- 10. TRANSFERÊNCIA INTERNACIONAL -->
+      <div class="privacy-section">
+        <h3>10. Transferência internacional de dados</h3>
+        <p>Alguns de nossos parceiros (como plataformas de e-mail marketing e armazenamento em nuvem) podem estar localizados no exterior. Nestes casos, adotamos cláusulas contratuais padrão e garantimos que os dados são tratados em conformidade com a LGPD e com países que oferecem nível adequado de proteção.</p>
+      </div>
+      
+      <!-- 11. ALTERAÇÕES -->
+      <div class="privacy-section">
+        <h3>11. Alterações nesta política</h3>
+        <p>Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças em nossas práticas ou na legislação. A versão mais recente estará sempre disponível em nosso site, com a data da última atualização.</p>
+        <p>Recomendamos que você revise esta página regularmente.</p>
+      </div>
+      
+      <!-- 12. CONTATO DO DPO -->
+      <div id="contato-dpo" class="contact-card">
+        <h4 class="text-white mb-3"><i class="bi bi-person-badge me-2"></i> Encarregado de Proteção de Dados (DPO)</h4>
+        <p>A Yspanus nomeou um Encarregado de Proteção de Dados (DPO) para atender a questões relacionadas à LGPD:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i> <strong>E-mail:</strong> <a href="mailto:dpo@yspanus.com.br">dpo@yspanus.com.br</a></li>
+          <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> <strong>Telefone:</strong> (21) 96554-4400 (ramal 8080)</li>
+          <li><i class="bi bi-clock-fill me-2"></i> <strong>Horário de atendimento:</strong> Segunda a sexta, 9h às 18h</li>
+        </ul>
+        <p class="mt-3 mb-0 small">Para questões gerais sobre privacidade, você também pode utilizar nossos canais de atendimento padrão.</p>
+      </div>
+      
+      <!-- 13. CONSENTIMENTO EXPLÍCITO -->
+      <div class="privacy-section p-4 bg-light rounded-3">
+        <h3 class="text-ys-red">Consentimento para comunicações</h3>
+        <p>Ao fornecer seus dados e utilizar nosso site, você consente expressamente que a Yspanus:</p>
+        <ul>
+          <li>Utilize seus dados para as finalidades descritas nesta política.</li>
+          <li>Entre em contato por e-mail, telefone ou WhatsApp para responder suas solicitações e enviar informações sobre os cursos.</li>
+          <li>Envie newsletters e materiais promocionais (quando você assinar a newsletter).</li>
+        </ul>
+        <p>Você pode revogar seu consentimento a qualquer momento, solicitando o descadastramento (link em todos os e-mails) ou entrando em contato com nosso DPO.</p>
+        <div class="text-center mt-3">
+          <a href="contatoys.html" class="btn btn-ys-red px-4">Voltar para a página inicial</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h5 class="text-ys-yellow mb-3">YSPANUS LANGUAGES</h5>
+        <p class="small opacity-75">Excelência em ensino de idiomas desde 1989. Especialistas em treinamento corporativo e programas de Diversidade & Inclusão.</p>
+        <div class="mt-3">
+          <a href="https://www.instagram.com/yspanus/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/YspanusLanguages/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/yspanuslanguages/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-ys-yellow mb-3">Contato</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-whatsapp text-ys-yellow me-2"></i> <a href="https://wa.me/5521965544400" target="_blank" rel="noopener" class="footer-link">(21) 96554-4400 (WhatsApp)</a></li>
+          <li class="mb-2"><i class="bi bi-envelope me-2"></i> <a href="mailto:financeiro@yspanus.com.br" class="footer-link">financeiro@yspanus.com.br</a></li>
+          <li class="mb-2"><i class="bi bi-megaphone me-2"></i> <a href="mailto:ouvidoria@yspanus.com.br" class="footer-link">ouvidoria@yspanus.com.br</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-ys-yellow mb-3">Legal</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="sobreys.html" class="footer-link"><i class="bi bi-building me-2"></i>Sobre a Yspanus</a></li>
+          <li class="mb-2"><a href="politicays.html" class="footer-link"><i class="bi bi-shield-lock me-2"></i>Política de Privacidade</a></li>
+          <li class="mb-2"><a href="termoys.html" class="footer-link"><i class="bi bi-file-text me-2"></i>Termos de Uso</a></li>
+          <li class="mb-2"><a href="contatoys.html" class="footer-link"><i class="bi bi-briefcase me-2"></i>Trabalhe conosco</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-white-50 my-4">
+    <div class="row align-items-center">
+      <div class="col-md-6 small opacity-75">
+        © 2026 Yspanus Languages. Todos os direitos reservados. CNPJ 39.242.458/0001-92
+      </div>
+      <div class="col-md-6 text-md-end small">
+        <span class="text-white-50 me-3"><i class="bi bi-shield-check"></i> LGPD</span>
+        <span class="text-white-50"><i class="bi bi-lock"></i> Dados protegidos</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

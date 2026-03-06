@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YSPANUS Languages · Cursos de Idiomas · Consultoria Corporativa</title>
+  <meta name="description" content="YSPANUS Languages: desde 1992 oferecendo cursos de idiomas personalizados e consultoria linguística para empresas e escolas. Inglês, Espanhol, Francês, Alemão e mais.">
+  
+  <!-- Bootstrap 5 + ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Fonte Google (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --ys-red: #c8102e;
+      --ys-yellow: #ffb81c;
+      --ys-white: #ffffff;
+      --ys-light-bg: #fef6e9;
+      --ys-gray: #f8f9fa;
+      --ys-dark: #1a1e21;
+    }
+    
+    * {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    body {
+      color: #212529;
+      background-color: var(--ys-white);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    .bg-ys-red { background-color: var(--ys-red) !important; }
+    .bg-ys-yellow { background-color: var(--ys-yellow) !important; }
+    .text-ys-red { color: var(--ys-red) !important; }
+    .text-ys-yellow { color: var(--ys-yellow) !important; }
+    
+    .btn-ys-red {
+      background-color: var(--ys-red);
+      border-color: var(--ys-red);
+      color: white;
+      transition: 0.2s;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+    }
+    .btn-ys-red:hover {
+      background-color: #a00d25;
+      border-color: #a00d25;
+      color: white;
+    }
+    
+    .btn-ys-outline {
+      background-color: transparent;
+      border: 2px solid var(--ys-red);
+      color: var(--ys-red);
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 0.75rem 2rem;
+    }
+    .btn-ys-outline:hover {
+      background-color: var(--ys-red);
+      color: white;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background-color: var(--ys-yellow);
+    }
+    .section-title-center:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Navbar */
+    .navbar {
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      padding: 0.8rem 0;
+    }
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+    .nav-link {
+      font-weight: 600;
+      color: var(--ys-dark);
+      margin: 0 0.25rem;
+      padding: 0.5rem 1rem !important;
+      border-radius: 50px;
+      transition: 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--ys-red);
+      background-color: rgba(200,16,46,0.05);
+    }
+    
+    /* Hero */
+    .hero-section {
+      background: linear-gradient(135deg, #fff8f0, white);
+      padding: 4rem 0;
+    }
+    
+    /* Cards de serviço */
+    .service-card {
+      background-color: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      transition: 0.3s;
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(200,16,46,0.08);
+      border-color: var(--ys-yellow);
+    }
+    .service-icon {
+      background-color: var(--ys-yellow);
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .service-icon i {
+      font-size: 2rem;
+      color: var(--ys-red);
+    }
+    
+    /* Lista de serviços */
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 0;
+    }
+    .service-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed #eee;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .service-list li i {
+      color: var(--ys-red);
+      font-size: 1.2rem;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+    
+    /* Card de curso */
+    .course-card {
+      background-color: white;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+      transition: 0.3s;
+      border: 1px solid #f0f0f0;
+      height: 100%;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(200,16,46,0.1);
+    }
+    .course-tag {
+      background-color: var(--ys-yellow);
+      color: var(--ys-dark);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 0.4rem 1rem;
+      display: inline-block;
+      border-radius: 50px;
+      margin: 1rem 1rem 0;
+    }
+    .course-body {
+      padding: 1.5rem 1rem;
+    }
+    .course-title {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .course-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--ys-red);
+      margin-bottom: 0.5rem;
+    }
+    .course-price small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #6c757d;
+    }
+    
+    /* Depoimento */
+    .testimonial-card {
+      background-color: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      border-left: 5px solid var(--ys-yellow);
+    }
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--ys-red);
+    }
+    
+    /* Como funciona */
+    .step-box {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .step-number {
+      background-color: var(--ys-yellow);
+      color: var(--ys-red);
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin: 0 auto 1.5rem;
+    }
+    
+    /* Rodapé */
+    .footer-link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .footer-link:hover {
+      color: var(--ys-yellow);
+    }
+    
+    .social-icon {
+      color: var(--ys-yellow);
+      font-size: 1.8rem;
+      margin-right: 1rem;
+      transition: 0.2s;
+    }
+    .social-icon:hover {
+      color: white;
+    }
+    
+    .lgpd-check {
+      background-color: #f8f9fa;
+      border-left: 4px solid var(--ys-red);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .section-title { font-size: 2rem; }
+      .navbar-brand img { height: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR BRANCA COM LOGO -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="logoys.jpg" alt="YSPANUS Languages" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="/">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatoys.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">Idiomas que <span class="text-ys-red">conectam</span> pessoas e negócios</h1>
+        <p class="fs-5 text-secondary mb-4">Desde 1992, o YSPANUS® Languages oferece soluções personalizadas em ensino de idiomas e consultoria linguística para empresas, escolas e profissionais que buscam excelência.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#cursos" class="btn btn-ys-red">Conheça nossos cursos</a>
+          <a href="contatoys.html" class="btn btn-ys-outline">Fale com um especialista</a>
+        </div>
+        <div class="d-flex gap-4 mt-5">
+          <div>
+            <span class="fw-bold fs-3 text-ys-red">+30k</span>
+            <p class="small text-secondary">alunos formados</p>
+          </div>
+          <div>
+            <span class="fw-bold fs-3 text-ys-red">9</span>
+            <p class="small text-secondary">idiomas</p>
+          </div>
+          <div>
+            <span class="fw-bold fs-3 text-ys-red">32</span>
+            <p class="small text-secondary">anos de história</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23c8102e'/%3E%3Ctext x='50' y='200' fill='%23ffffff' font-size='30' font-weight='bold'%3EYSPANUS%3C/text%3E%3C/svg%3E" alt="YSPANUS" class="img-fluid rounded-4 shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE (QUEM SOMOS) -->
+<section id="sobre" class="py-5 bg-light">
+  <div class="container py-4">
+    <h2 class="section-title">Quem Somos</h2>
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <p class="lead">O <strong>YSPANUS® Languages</strong>, fundado e dirigido por pedagogos e empreendedores de origem espanhola, iniciou suas atividades como empresa pioneira no ensino do Espanhol presencial, e para fins específicos, em 1992.</p>
+        <p>Posteriormente, se especializou em cursos intensivos e customizados, tendo já formado em torno de <strong>30.000 alunos</strong> e na atualidade possui em sua cartela 9 idiomas em formatos variados: Espanhol, Inglês, Francês, Italiano, Alemão, Mandarim, Árabe e Russo.</p>
+        <p>O YSPANUS® Languages oferta soluções de qualidade em treinamentos e consultoria, especialmente customizadas para empresas, escolas e profissionais que otimizam tempo e investimento.</p>
+        
+        <div class="row mt-4 g-4">
+          <div class="col-md-6">
+            <div class="bg-white p-4 rounded-4">
+              <h4 class="text-ys-red mb-3">Visão</h4>
+              <p class="mb-0">"Ser uma empresa de Idiomas de referência com identidade diferenciada, e crescimento constante, por priorizar a busca da excelência pela customização, pela inovação e pelo primado do multiculturalismo em todos os seus serviços."</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="bg-white p-4 rounded-4">
+              <h4 class="text-ys-red mb-3">Missão</h4>
+              <p class="mb-0">Ofertar e desenvolver na área de Idiomas consultoria e treinamento multiculturais, customizados e de qualidade, com resultados rápidos, pragmáticos e inovadores para os seus clientes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="bg-ys-red text-white p-5 rounded-4">
+          <h4 class="mb-4">Nossos Valores</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> Multiculturalismo e Respeito às Diferenças</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> Customização sempre</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> O Pão nosso de cada dia é a Inovação</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> Buscamos incansavelmente a Excelência</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> Não vivemos sem Comprometimento</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> O Cliente deve ter uma Experiência</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> Foco na Geração de Resultados</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> Transparência é a nossa Ética</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> Afetividade</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill me-2 text-ys-yellow"></i> Inspirar e Transpirar Curiosidade</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS: CONSULTORIA EMPRESAS -->
+<section id="servicos" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Consultoria para Empresas</h2>
+    <p class="fs-5 mb-5">Através de ferramentas especializadas, o YSPANUS® Languages oferece ao RH e à direção das empresas diagnóstico rápido e preciso das habilidades e das necessidades linguísticas de seus colaboradores e constrói um plano de ação eficaz para o alcance dos objetivos da corporação.</p>
+    
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-file-earmark-text"></i></div>
+          <h4>Aplicação de Testes de Proficiência Linguística</h4>
+          <p>Elaboração de testes escritos e orais específicos para a realidade da empresa e para uso interno exclusivo pelo seu RH.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-people"></i></div>
+          <h4>Entrevista e Avaliação</h4>
+          <p>Avaliação de candidatos em Processos Seletivos e Programas de Trainees com foco em habilidades linguísticas.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-graph-up"></i></div>
+          <h4>Auditoria Linguística</h4>
+          <p>Para melhor entendimento das competências e habilidades de seus colaboradores.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-diagram-3"></i></div>
+          <h4>Plano de Desenvolvimento Linguístico</h4>
+          <p>Personalizado e direcionado às necessidades individuais de cada colaborador.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-bank2"></i></div>
+          <h4>Política de Idiomas</h4>
+          <p>Centrada no Diagnóstico, Metas Comunicativas por Cargo/Departamento e Plano de Ação para maximização dos resultados.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-mic"></i></div>
+          <h4>Tradução Simultânea</h4>
+          <p>Para eventos corporativos ou acompanhamento de executivos.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-globe2"></i></div>
+          <h4>Cross Cultural Training</h4>
+          <p>Assistência a expatriados e assimilação de novos paradigmas culturais.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-journal-bookmark-fill"></i></div>
+          <h4>Produção de Materiais Culturais</h4>
+          <p>Pesquisa para projetos de negócios com empresas estrangeiras.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-pencil-square"></i></div>
+          <h4>Tradução, Versão e Revisão</h4>
+          <p>De documentos e outros textos técnicos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTORIA PARA ESCOLAS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Consultoria para Escolas</h2>
+    <p class="fs-5 mb-5">O YSPANUS® Languages, com sua expertise de quase 30 anos, oferta às escolas parceiras os seguintes serviços:</p>
+    
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-person-workspace"></i></div>
+          <h4>Seleção e treinamento de professores</h4>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-journal-bookmark-fill"></i></div>
+          <h4>Treinamento didático e formatação de projetos pedagógicos</h4>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-mortarboard"></i></div>
+          <h4>Cursos regulares e semi-intensivos em nossa sede</h4>
+          <p>Com vantagens especiais para alunos do Ensino Fundamental e Médio das escolas parceiras.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-building"></i></div>
+          <h4>Implantação de Centros de Idiomas</h4>
+          <p>Nas instalações próprias das escolas parceiras para atender alunos, pais e colaboradores.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-globe2"></i></div>
+          <h4>Projeto multicultural</h4>
+          <p>Elaboração, implementação e monitoramento de projeto de vivência bilíngue diária.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTO CORPORATIVO -->
+<section id="depoimentos" class="py-5">
+  <div class="container">
+    <h2 class="section-title">O que nossos clientes dizem</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="testimonial-card d-flex flex-column flex-md-row gap-4 align-items-center">
+          <div class="testimonial-img">
+            <i class="bi bi-person-circle"></i>
+          </div>
+          <div>
+            <p class="fs-5 fst-italic mb-3">"A Yspanus surpreende pelo planejamento estratégico e a metodologia como diferencial. Elaboramos um plano de desenvolvimento para os profissionais da Synapsis, empresa que se destacou por 8 anos consecutivos como uma das melhores para trabalhar pela GPTW, com um resultado eficaz e de excelência. Com a Yspanus, conquistamos desenvolvimento profissional e fizemos amigos. Parabéns!"</p>
+            <h5 class="fw-bold mb-1">Márcia Caporazzo</h5>
+            <p class="text-secondary">Diretora Sócia da STRATEGIC RH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AULAS ONLINE -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Aulas Online</h2>
+    <p class="fs-5 mb-4">Este formato é perfeito para aqueles que desejam ter um ensino que atenda à sua rotina, ao seu ritmo de aprendizagem e com foco total nas suas metas específicas.</p>
+    
+    <div class="row g-4 mb-5">
+      <div class="col-md-3 col-6">
+        <div class="bg-white p-4 rounded-4 text-center">
+          <i class="bi bi-person-video3 text-ys-red fs-1"></i>
+          <h5 class="mt-2">Professores especialistas</h5>
+          <p class="small">Em constante treinamento</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="bg-white p-4 rounded-4 text-center">
+          <i class="bi bi-bullseye text-ys-red fs-1"></i>
+          <h5 class="mt-2">Objetividade</h5>
+          <p class="small">Aulas acordes com objetivos específicos</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="bg-white p-4 rounded-4 text-center">
+          <i class="bi bi-scissors text-ys-red fs-1"></i>
+          <h5 class="mt-2">Personalização</h5>
+          <p class="small">Aulas e material didático exclusivos</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="bg-white p-4 rounded-4 text-center">
+          <i class="bi bi-calendar-check text-ys-red fs-1"></i>
+          <h5 class="mt-2">Flexibilidade</h5>
+          <p class="small">Dias, horários e conteúdos no seu ritmo</p>
+        </div>
+      </div>
+    </div>
+    
+    <h3 class="mb-4">Idiomas oferecidos</h3>
+    <div class="d-flex flex-wrap gap-2 mb-5">
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Inglês</span>
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Espanhol</span>
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Francês</span>
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Italiano</span>
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Alemão</span>
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Mandarim</span>
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Russo</span>
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Coreano</span>
+      <span class="badge bg-ys-red text-white py-2 px-4 fs-6">Árabe</span>
+    </div>
+    
+    <h3 class="mb-4">Como funcionam as aulas online</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="step-box">
+          <div class="step-number">1</div>
+          <h5>Plataformas de ensino</h5>
+          <p class="text-secondary">Dependendo da turma, o aluno deverá se cadastrar no StreamYard ou Jitsi para participar das aulas ao vivo.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-box">
+          <div class="step-number">2</div>
+          <h5>Configurações do navegador</h5>
+          <p class="text-secondary">Durante as aulas, o aluno deve habilitar seu áudio e vídeo para interagir com o professor e com a turma.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-box">
+          <div class="step-number">3</div>
+          <h5>Grupo do Facebook</h5>
+          <p class="text-secondary">O aluno deverá participar do grupo de sua turma para acessar as gravações das aulas e avisos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO DE CURSOS -->
+<section id="cursos" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Nossos Cursos Online</h2>
+    
+    <!-- Superintensivo -->
+    <h3 class="mb-4 text-ys-red">Superintensivo</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Superintensivo</div>
+          <div class="course-body">
+            <h5 class="course-title">Superintensivo Online de Inglês</h5>
+            <div class="course-price">R$ 4.500,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Cursos Básicos -->
+    <h3 class="mb-4 text-ys-red">Cursos Básicos</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Básico</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Francês Online - Iniciante (A1)</h5>
+            <div class="course-price">R$ 4.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Básico</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Espanhol Online - Básico (A1 + A2)</h5>
+            <div class="course-price">R$ 4.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Básico</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Inglês Online - Iniciante (A1)</h5>
+            <div class="course-price">R$ 4.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Básico</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Italiano Online - Iniciante (A1 + A2)</h5>
+            <div class="course-price">R$ 8.000,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Básico</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Idiomas Online - Iniciante (A1 + A2)</h5>
+            <div class="course-price">R$ 4.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Básico</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Online de Introdução ao Coreano</h5>
+            <div class="course-price">R$ 3.000,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Básico</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Online de Introdução ao Russo</h5>
+            <div class="course-price">R$ 1.200,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Básico</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Online de Introdução ao Árabe</h5>
+            <div class="course-price">R$ 3.000,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Cursos Intermediários -->
+    <h3 class="mb-4 text-ys-red">Cursos Intermediários</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Intermediário</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Inglês Online - Intermediário (B1 + B2)</h5>
+            <div class="course-price">R$ 4.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Intermediário</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Idiomas Online - Intermediário (B1 + B2)</h5>
+            <div class="course-price">R$ 9.000,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Intermediário</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Alemão Online - Intermediário (B1 + B2)</h5>
+            <div class="course-price">R$ 9.000,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Avançado -->
+    <h3 class="mb-4 text-ys-red">Cursos Avançados</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Avançado</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Idiomas Online - Avançado (C1 + C2)</h5>
+            <div class="course-price">R$ 9.000,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Instrumental -->
+    <h3 class="mb-4 text-ys-red">Cursos Instrumentais</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Instrumental</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Instrumental Online</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Entrevista de Emprego -->
+    <h3 class="mb-4 text-ys-red">Entrevista de Emprego</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Entrevista</div>
+          <div class="course-body">
+            <h5 class="course-title">Yspanus Online - Francês para Entrevista de Emprego</h5>
+            <div class="course-price">R$ 1.800,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Conversação -->
+    <h3 class="mb-4 text-ys-red">Conversação</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Conversação</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso Intensivo de Conversação Online</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Preparatórios -->
+    <h3 class="mb-4 text-ys-red">Cursos Preparatórios</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Preparatório</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso de Espanhol - Preparatório DELE/SIELE</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Preparatório</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso de Inglês - Preparatório TOEFL</h5>
+            <div class="course-price">R$ 4.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Preparatório</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso de Italiano - Preparatório CELI/CILS</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Preparatório</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso de Francês - Preparatório DELF</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Preparatório</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso de Mandarim - Preparatório HSK3</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Preparatório</div>
+          <div class="course-body">
+            <h5 class="course-title">Curso de Coreano - Preparatório TOPIK</h5>
+            <div class="course-price">R$ 3.000,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Para Viagens -->
+    <h3 class="mb-4 text-ys-red">Cursos para Viagens</h3>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Viagens</div>
+          <div class="course-body">
+            <h5 class="course-title">Espanhol para Viagens</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Viagens</div>
+          <div class="course-body">
+            <h5 class="course-title">Inglês para Viagens</h5>
+            <div class="course-price">R$ 1.200,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Viagens</div>
+          <div class="course-body">
+            <h5 class="course-title">Italiano para Viagens</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Viagens</div>
+          <div class="course-body">
+            <h5 class="course-title">Francês para Viagens</h5>
+            <div class="course-price">R$ 2.700,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Viagens</div>
+          <div class="course-body">
+            <h5 class="course-title">Alemão para Viagens</h5>
+            <div class="course-price">R$ 1.200,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="course-card">
+          <div class="course-tag">Viagens</div>
+          <div class="course-body">
+            <h5 class="course-title">Mandarim para Viagens</h5>
+            <div class="course-price">R$ 1.200,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Aulas Particulares -->
+    <h3 class="mb-4 text-ys-red">Aulas Particulares</h3>
+    <div class="row g-4">
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Espanhol</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Inglês</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Italiano</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Francês</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Alemão</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Mandarim</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Coreano</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Russo</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="course-card">
+          <div class="course-body">
+            <h5 class="course-title">Árabe</h5>
+            <div class="course-price">R$ 1.500,00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER E CONTATO RÁPIDO -->
+<section class="py-5 bg-light" id="newsletter">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="bg-white p-5 rounded-5 shadow-sm">
+          <h3 class="text-center mb-4">Receba novidades e ofertas exclusivas</h3>
+          <form action="/newsletter" method="POST">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control form-control-lg" placeholder="Seu nome" name="nome" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control form-control-lg" placeholder="Seu e-mail" name="email" required>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="consentimento" id="newsConsent" required>
+                  <label class="form-check-label small" for="newsConsent">
+                    Concordo em receber comunicações da Yspanus. Li e aceito a <a href="politicays.html" target="_blank" class="text-ys-red">Política de Privacidade</a>. Ao assinar, você concorda em receber conteúdos exclusivos da Yspanus. Você pode cancelar a qualquer momento. Seus dados estão seguros conosco.
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-ys-red w-100 py-3">Assinar newsletter</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ COMPLETO -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <img src="logoys.jpg" alt="YSPANUS" style="height: 50px; background-color: white; padding: 5px; border-radius: 5px;" class="mb-3">
+        <p class="small opacity-75">Desde 1992 oferecendo soluções personalizadas em idiomas para pessoas e empresas.</p>
+        <div class="mt-3">
+          <a href="https://www.instagram.com/yspanus/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/YspanusLanguages/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/yspanuslanguages/" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-ys-yellow mb-3">Contato</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-whatsapp text-ys-yellow me-2"></i> <a href="https://wa.me/5521965544400" target="_blank" rel="noopener" class="footer-link">(21) 96554-4400 (WhatsApp)</a></li>
+          <li class="mb-2"><i class="bi bi-envelope me-2"></i> <a href="mailto:financeiro@yspanus.com.br" class="footer-link">financeiro@yspanus.com.br</a></li>
+          <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span class="footer-link">Icaraí, Niterói - RJ</span></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-ys-yellow mb-3">Legal</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="sobreys.html" class="footer-link"><i class="bi bi-building me-2"></i>Sobre a Yspanus</a></li>
+          <li class="mb-2"><a href="politicays.html" class="footer-link"><i class="bi bi-shield-lock me-2"></i>Política de Privacidade</a></li>
+          <li class="mb-2"><a href="termoys.html" class="footer-link"><i class="bi bi-file-text me-2"></i>Termos de Uso</a></li>
+          <li class="mb-2"><a href="contatoys.html" class="footer-link"><i class="bi bi-briefcase me-2"></i>Trabalhe conosco</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-white-50 my-4">
+    <div class="row align-items-center">
+      <div class="col-md-6 small opacity-75">
+        © 2026 Yspanus Languages. Todos os direitos reservados. CNPJ 39.242.458/0001-92
+      </div>
+      <div class="col-md-6 text-md-end small">
+        <span class="text-white-50 me-3"><i class="bi bi-shield-check"></i> LGPD</span>
+        <span class="text-white-50"><i class="bi bi-lock"></i> Dados protegidos</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
